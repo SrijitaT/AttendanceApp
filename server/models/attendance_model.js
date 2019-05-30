@@ -28,7 +28,7 @@ module.exports.createAttendance = async card_id => {
       user_id: user_id[0][0].user_id,
       count: count[0].length > 0 ? count[0][0].count + 1 : 1
     };
-    //return Attendance.create(att);
+    return Attendance.create(att);
   } catch (err) {
     console.log(err);
   }
